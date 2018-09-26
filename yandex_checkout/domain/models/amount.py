@@ -1,3 +1,5 @@
+from decimal import Decimal
+
 from yandex_checkout.domain.common.base_object import BaseObject
 
 
@@ -15,7 +17,7 @@ class Amount(BaseObject):
 
     @value.setter
     def value(self, value):
-        self.__value = float(value)
+        self.__value = Decimal(value)
 
     @property
     def currency(self):
