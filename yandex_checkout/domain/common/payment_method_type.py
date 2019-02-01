@@ -7,6 +7,7 @@ class PaymentMethodType:
     * yandex_checkout.domain.common.PaymentMethodType.SBERBANK
     * yandex_checkout.domain.common.PaymentMethodType.CASH
     * yandex_checkout.domain.common.PaymentMethodType.MOBILE_BALANCE
+    * yandex_checkout.domain.common.PaymentMethodType.PSB
     * yandex_checkout.domain.common.PaymentMethodType.QIWI
     * yandex_checkout.domain.common.PaymentMethodType.WEBMONEY
     * yandex_checkout.domain.common.PaymentMethodType.ALFABANK
@@ -19,9 +20,11 @@ class PaymentMethodType:
     SBERBANK = 'sberbank'
     CASH = 'cash'
     MOBILE_BALANCE = 'mobile_balance'
+    PSB = 'psb'
     QIWI = 'qiwi'
     WEBMONEY = 'webmoney'
     ALFABANK = 'alfabank'
     APPLEPAY = 'apple_pay'
     GOOGLE_PAY = 'google_pay'
     INSTALMENTS = 'installments'
+    B2B_SBERBANK = 'b2b_sberbank'

@@ -4,6 +4,8 @@ from yandex_checkout.domain.models.payment_data.request.payment_data_alfabank im
     PaymentDataAlfabank as RequestPaymentDataAlfabank
 from yandex_checkout.domain.models.payment_data.request.payment_data_applepay import \
     PaymentDataApplepay as RequestPaymentDataApplepay
+from yandex_checkout.domain.models.payment_data.request.payment_data_b2b_sberbank import \
+    PaymentDataB2bSberbank as RequestPaymentDataB2bSberbank
 from yandex_checkout.domain.models.payment_data.request.payment_data_google_pay import \
     PaymentDataGooglePay as RequestPaymentDataGooglePay
 from yandex_checkout.domain.models.payment_data.request.payment_data_cash import \
@@ -27,6 +29,8 @@ from yandex_checkout.domain.models.payment_data.response.payment_data_alfabank i
     PaymentDataAlfabank as ResponsePaymentDataAlfabank
 from yandex_checkout.domain.models.payment_data.response.payment_data_applepay import \
     PaymentDataApplepay as ResponsePaymentDataApplepay
+from yandex_checkout.domain.models.payment_data.response.payment_data_b2b_sberbank import \
+    PaymentDataB2bSberbank as ResponsePaymentDataB2bSberbank
 from yandex_checkout.domain.models.payment_data.response.payment_data_google_pay import \
     PaymentDataGooglePay as ResponsePaymentDataGooglePay
 from yandex_checkout.domain.models.payment_data.response.payment_data_cash import \
@@ -39,6 +43,8 @@ from yandex_checkout.domain.models.payment_data.response.payment_data_mobile_bal
     PaymentDataMobileBalance as ResponsePaymentDataMobileBalance
 from yandex_checkout.domain.models.payment_data.response.payment_data_sberbank import \
     PaymentDataSberbank as ResponsePaymentDataSberbank
+from yandex_checkout.domain.models.payment_data.response.payment_data_psb import \
+    PaymentDataPsb as ResponsePaymentDataPsb
 from yandex_checkout.domain.models.payment_data.response.payment_data_qiwi import \
     PaymentDataQiwi as ResponsePaymentDataQiwi
 from yandex_checkout.domain.models.payment_data.response.payment_data_webmoney import \
@@ -64,7 +70,8 @@ class PaymentDataClassMap(DataContext):
             PaymentMethodType.WEBMONEY: RequestPaymentDataWebmoney,
             PaymentMethodType.APPLEPAY: RequestPaymentDataApplepay,
             PaymentMethodType.GOOGLE_PAY: RequestPaymentDataGooglePay,
-            PaymentMethodType.INSTALMENTS: RequestPaymentDataInstallments
+            PaymentMethodType.INSTALMENTS: RequestPaymentDataInstallments,
+            PaymentMethodType.B2B_SBERBANK: RequestPaymentDataB2bSberbank
         }
 
     @property
@@ -76,9 +83,11 @@ class PaymentDataClassMap(DataContext):
             PaymentMethodType.MOBILE_BALANCE: ResponsePaymentDataMobileBalance,
             PaymentMethodType.SBERBANK: ResponsePaymentDataSberbank,
             PaymentMethodType.YANDEX_MONEY: ResponsePaymentDataYandexWallet,
+            PaymentMethodType.PSB: ResponsePaymentDataPsb,
             PaymentMethodType.QIWI: ResponsePaymentDataQiwi,
             PaymentMethodType.WEBMONEY: ResponsePaymentDataWebmoney,
             PaymentMethodType.APPLEPAY: ResponsePaymentDataApplepay,
             PaymentMethodType.GOOGLE_PAY: ResponsePaymentDataGooglePay,
-            PaymentMethodType.INSTALMENTS: ResponcePaymentDataInstallments
+            PaymentMethodType.INSTALMENTS: ResponcePaymentDataInstallments,
+            PaymentMethodType.B2B_SBERBANK: ResponsePaymentDataB2bSberbank
         }

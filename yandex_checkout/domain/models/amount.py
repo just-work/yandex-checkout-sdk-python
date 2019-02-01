@@ -1,6 +1,7 @@
 from decimal import Decimal
 
 from yandex_checkout.domain.common.base_object import BaseObject
+from decimal import Decimal
 
 
 class Amount(BaseObject):
