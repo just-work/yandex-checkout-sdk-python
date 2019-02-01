@@ -62,7 +62,7 @@ class Receipt(BaseObject):
     @phone.setter
     def phone(self, value):
         cast_value = str(value)
-        if re.match('^[0-9]{4,15}$', cast_value):
+        if re.match('^\+?[0-9]{4,15}$', cast_value):
             self.__phone = cast_value
         else:
             raise ValueError('Invalid phone value type')
