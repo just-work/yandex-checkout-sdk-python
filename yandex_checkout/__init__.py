@@ -9,7 +9,7 @@ from yandex_checkout.domain.models.amount import Amount
 from yandex_checkout.domain.models.currency import Currency
 from yandex_checkout.domain.models.receipt import Receipt
 from yandex_checkout.domain.models.receipt_item import ReceiptItem
-from yandex_checkout.domain.notification.webhook_notification import WebhookNotification
+from yandex_checkout.domain.notification.webhook_notification import RefundWebhookNotification, WebhookNotification
 from yandex_checkout.domain.request.capture_payment_builder import CapturePaymentBuilder
 from yandex_checkout.domain.request.capture_payment_request import CapturePaymentRequest
 from yandex_checkout.domain.request.payment_request import PaymentRequest
@@ -20,3 +20,7 @@ from yandex_checkout.domain.response.payment_response import PaymentResponse
 from yandex_checkout.domain.response.refund_response import RefundResponse
 from yandex_checkout.payment import Payment
 from yandex_checkout.refund import Refund
+from yandex_checkout.webhook import Webhook
+from yandex_checkout.domain.request.webhook_request import WebhookRequest
+from yandex_checkout.domain.response.webhook_response import WebhookResponse, WebhookList
+from yandex_checkout.settings import Settings
